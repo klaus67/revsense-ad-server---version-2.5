@@ -1,0 +1,114 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<form method=post>
+
+<tr><td colspan=2><b><font size=3>@@Display & Click Preferences@@</font></b></td></tr>
+<tr>
+	<td width=1>@@Ad Sort@@:</td>
+	<td width=99%>
+		<select name=f[ad_sort]>
+		{AD_SORT}
+		</select>
+	</td>
+</tr>
+<tr>
+	<td width=1>@@Click@@&nbsp;@@Target@@:</td>
+	<td width=99%>
+		<select name=f[urls_target]>
+			{URLS_TARGET}
+		</select>
+	</td>
+</tr>
+<tr>
+	<Td width=1>@@URL@@&nbsp;@@Hiding@@:</Td>
+	<td width=99%>
+		<input type=checkbox value="1" name="f[urls_hide]" {URLS_HIDE}>
+		@@Hide URL in browser status bar@@ - <i>(@@Will be replaced with Display-URL or Domain name@@)</i>
+	</td>
+</tr>
+<tr>
+	<td width=1>@@Tracking@@:</td>
+	<td width=99%>
+		<input type=checkbox value="1" name="f[urls_tracking]" {URLS_TRACKING}>
+		@@Use original URL instead of tracking URL@@ -  <i>(@@Will not log clickthroughs@@)</i>
+	</td>
+</tr>
+</tr>
+
+<tr><td colspan=2>&nbsp;<br><b><font size=3>@@Edit Ad Format@@</font></b></td></tr>
+<tr>
+	<td colspan=2>
+	<font size=1>
+		@@Setup the format of individual elements for ads in this zone@@.<br>
+		@@This will also affect how the form to create or edit a new ad will be displayed@@. ##HELPSTR#format_choices##
+	</font>
+	<table width=400 border=0 cellspacing=0 cellpadding=0>
+	<tr><td bgcolor=#666666>
+	<table width=100% border=0 cellspacing=1 cellpadding=3>
+	<tr bgcolor=#FFFFFF>
+		<td width=1 colspan=3>&nbsp;</td>
+		<td colspan=5 align=center bgcolor=#EEEEEE>@@Text Element Formats@@</td>
+		<td colspan=3 align=center bgcolor=#EEEEEE>@@Image Formats@@</td>
+	</tr>
+	<tr bgcolor=#FFFFEE>
+		<td width=1 align=center><font size=1>#</font></td>	
+		<td width=1><font size=1>@@Type@@</font></td>			
+		<td width=1><font size=1>@@Field@@&nbsp;@@Name@@</font></td>
+		<td width=1><font size=1><b>@@Font@@</b></font></td>
+		<td width=1><font size=1><b>@@Size@@</b></font></td>
+		<td width=1><font size=1><b>@@Color@@</b></font></td>
+		<td width=1><font size=1><b>@@Bold@@</b></font></td>
+		<td width=1><font size=1><b>@@MaxLength@@</b></font></td>		
+		<td width=1><font size=1><b>@@MaxBytes@@</b></font></td>
+		<td width=1><font size=1><b>@@Height@@</b></font></td>
+		<td width=1><font size=1><b>@@Width@@</b></font></td>
+	</tr>
+	<!-- BEGIN: formatlist -->
+	<tr bgcolor="{BGCOLOR}">
+		<td width=1 align=center><font size=1><input type=checkbox name="f[ad_format][{ROW}][type]" value="{TYPE}" {CHECKED}></font></td>	
+		<td width=1><font size=1>{TYPE}</font></td>
+		<td width=1><font size=1><input type=text name="f[ad_format][{ROW}][name]" value="{NAME}" size=15></font></td>
+		<td width=1><font size=1>{FONT}</font></td>
+		<td width=1><font size=1>{SIZE}</font></td>
+		<td width=1><font size=1>{COLOR}</font></td>
+		<td width=1><font size=1>{BOLD}</font></td>
+		<td width=1 align=center><font size=1>{MAX_LENGTH}</font></td>
+		<td width=1 align=center><font size=1>{MAX_UPLOAD}</font></td>
+		<td width=1 align=center><font size=1>{HEIGHT}</font></td>
+		<td width=1 align=center><font size=1>{WIDTH}</font></td>
+	</tr>
+	<!-- END: formatlist -->
+	</table>
+	</td></tr>
+	</table>
+	</td>
+</tr>
+
+<tr><td colspan=2>&nbsp;<br><b><font size=3>@@Edit Ad Template@@</font></b></td></tr>
+<tr>
+	<td colspan=2>
+		@@You can edit the HTML here to define the look and feel of each individual ad@@. ##HELPSTR#format_templates##<br>
+		<textarea name=f[template] rows=8 cols=70 wrap=none>{TEMPLATE}</textarea>
+	</td>
+</tr>
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><br><input type=submit value="Update" name=f[submit]></td>
+</tr>
+<tr>
+	<td colspan=2>
+	<hr size=1>
+	<b>@@Template Preview@@</b><br>
+	@@This is what each individual ad will look like based on the template above@@
+	<p>
+	{PREVIEW}
+	</td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_format>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

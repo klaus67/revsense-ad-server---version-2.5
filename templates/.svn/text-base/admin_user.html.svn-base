@@ -1,0 +1,228 @@
+<!-- BEGIN: users -->
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td colspan=5>
+		<table width=100% border=0 cellspacing=0 cellpadding=3>
+		<form method=get>
+		<tr bgcolor="#EEEEEE">
+			<td width=1><b>@@Find@@:</b></td>
+			<td width=1><input type=text name=f[search] size=30 value="{SEARCH}"></td>
+			<td width=1><input type=submit value=Go></td>
+			<td width=99%><font size=2>@@You can search on email, name, id, or organization -- with wildcards@@</font></td>
+		</tr>
+		<input type=hidden name=section value=useradmin>
+		</form>
+		</table>
+	</td>
+</tr>
+</table>
+<hr size=1>
+<!-- BEGIN: results -->
+<Table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td bgcolor=#EEEEEE>
+<table width=100% border=0 cellspacing=1 cellpadding=3>
+<tr bgcolor=#CCCCCC>
+	<td><b>@@-@@</b></td>	
+	<td><b>@@Name@@</b></td>
+	<td><b>@@Type@@</b></td>	
+	<td><b>@@Organization@@</b></td>
+	<td><b>@@Email@@</b></td>
+	<td><b>@@Password@@</b></td>
+	<td><b>@@Status@@</b></td>
+	<td><b>@@Registered@@</b></td>
+	<td align=right><b>@@Balance@@</b></td>
+</tr>
+<!-- BEGIN: list -->
+<tr bgcolor="{BGCOLOR}">
+	<td><b><a href=?section=useradmin&action=deleteu&c=delete&f[id]={ID} title="@@Delete@@" onclick="javascript:return confirm('@@Are you sure you want to delete@@ [ {NAME} ] ?')"><img src=images/stock_delete-16.png border=0></a></b></td>
+	<td><a href=?section=useradmin&action=view&f[id]={ID}>{NAME}</a></td>
+	<td>{TYPE}</td>
+	<td>{ORG}</td>
+	<td><a href=mailto:{EMAIL}>{EMAIL}</a></td>
+	<td>{PASSWORD}</td>
+	<td>{STATUS}</td>
+	<td>{REGISTERED}</td>
+	<td align=right>{BALANCE}</td>
+</tr>
+<!-- END: list -->
+</table>
+</td></tr>
+</table>
+<!-- END: results -->
+
+<!-- END: users -->
+
+<!-- BEGIN: main -->
+<!-- BEGIN: user -->
+<font color=red>{ERRORMSG}</font>
+<table width=100% border=0 cellspacing=0 cellpadding=3 bgcolor="#EEEEEE">
+<form method=post>
+<tr>
+	<td width=48% bgcolor="#FFFFCC"><b>@@Edit User@@: {NAME}</b></td>
+	<td width=50% colspan=2 align=right bgcolor="#FFFFCC">
+		<a href="?section=user&action=login&f[email]={EMAIL}&f[password]={PASSWORD}">@@Login as@@ {NAME}</a>
+	</td>
+</tr>
+<tr><td width=48% valign=top>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td width=1><font size=2><b>@@Type@@:</b></td>
+	<td width=99%>
+		<Select name=f[admin]>
+			{ADMIN}
+		</select>
+		<select name=f[status]>
+			{STATUS}
+		</select>
+	</td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Email@@:</b></td>
+	<td width=99%><input type=text name=f[email] value="{EMAIL}" size=30></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Password@@:</b></td>
+	<td width=99%><input type=text name=f[password] value="{PASSWORD}" size=20></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Name@@:</b></td>
+	<td width=99%><input type=text name=f[name] value="{NAME}" size=30></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Organization@@:</b></td>
+	<td width=99%><input type=text name=f[organization] value="{ORGANIZATION}" size=30></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Referrer@@:</b></td>
+	<td width=99%><input type=text name=f[ref] value="{REF}" size=30></td>
+</tr>
+</table>
+</td>
+
+<td width=2%>&nbsp;</td>
+
+<td width=50% valign=top>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td width=1><font size=2><b>@@Country@@:</b></td>
+	<td width=99%>
+		<select name=f[country]>
+		{COUNTRY}
+		</select>
+	</td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Street@@:</b></td>
+	<td width=99%><input type=text name=f[street] value="{STREET}" size=40></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@City@@:</b></td>
+	<td width=99%><input type=text name=f[city] value="{CITY}" size=20></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@State@@:</b></td>
+	<td width=99%><input type=text name=f[state] value="{STATE}" size=20></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@Postal/Zip Code@@:</b></td>
+	<td width=99%><input type=text name=f[postalcode] value="{POSTALCODE}" size=10></td>
+</tr>
+<tr>
+	<td width=1><font size=2><b>@@URL@@:</b></td>
+	<td width=99%><input type=text name=f[url] value="{URL}" size=40></td>
+</tr>
+</table>
+<input type=hidden name=section value=useradmin>
+<input type=hidden name=action value=edituser>
+<input type=hidden name=f[id] value="{ID}">
+</td></tr>
+<tr bgcolor=#CCCCCC>
+	<td colspan=3 align=right><input type=submit value="@@Update User@@"></td>
+</tr>
+</form>
+</table>
+<!-- END: user -->
+<hr size=1 noshade>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+	<td width=48% valign=top>
+		<table width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#EEEEEE>
+		<tr>
+			<td colspan=5 bgcolor="#FFFFCC"><b>@@Advertisements@@</b></td>
+		</tr>
+		<tr bgcolor=#CCCCCC>
+			<td><font size=2><b>@@Title@@</b></td>
+			<td><font size=2><b>@@Zone@@</b></td>
+			<td width=1><font size=2><b>@@Type@@</b></td>
+			<td width=1 colspan=2><font size=2><b>@@Status@@</b></td>
+		</tr>
+		<!-- BEGIN: ads -->
+		<tr bgcolor={BGCOLOR}>
+			<td><font size=2><a href=?section=ads&action=edit&f[id]={ZID}>{TITLE}</a></font></td>
+			<td><font size=2>{ZONE}</td>
+			<td width=1><font size=2>{TYPE}</td>
+			<td width=1><font size=2>{STATUS}</td>
+			<td width=1><font size=2>&nbsp;</td>
+		</tr>
+		<!-- END: ads -->
+		</table>
+	</td>
+	
+	<td width=2%>&nbsp;</td>
+	
+	<td width=48% valign=top>
+		<table width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#EEEEEE>
+		<form method=get>
+		<tr>
+			<td colspan=2 bgcolor=#FFFFCC><b>@@Account Balance@@:</b> ${BALANCE}</td>
+		</tr>
+		<tr>
+			<td width=1><font size=2><b>@@Action@@:</b></font></td>
+			<td width=99%>
+				<select name=f[action]>
+					<option value=credit>@@CREDIT - Add money@@</option>
+					<option value=debit>@@DEBIT - Reduce balance@@</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td width=1><font size=2>@@Description@@:</font></td>
+			<td width=99%><input type=text name=f[description] size=30></td>
+		</tr>
+		<tr>
+			<td width=1><font size=2><b>@@Amount@@:</b></font></td>
+			<td width=99%><input type=text name=f[amount] size=10></td>
+		</tr>
+		<tr bgcolor=#CCCCCC>
+			<td colspan=2 align=right><input type=submit value="@@Adjust Balance@@"></td>
+		</tr>	
+		<input type=hidden name=section value=useradmin>
+		<input type=hidden name=action value=addfunds>
+		<input type=hidden name=f[id] value="{ID}">
+		</form>
+		</table>
+		<br>
+		<table width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#EEEEEE>
+		<tr bgcolor=#FFFFCC>
+			<td colspan=5 bgcolor=#FFFFCC><b>@@Payment History@@</b></td>
+		</tr>
+		<tr bgcolor=#CCCCCC>
+			<td><font size=2><b>@@Date@@</b></font></td>
+			<td><font size=2><b>@@Type@@</b></font></td>
+			<td><font size=2><b>@@Description@@</b></font></td>
+			<td align=right><font size=2><b>@@Amount@@</b></font></td>
+		</tr>
+		<!-- BEGIN: history -->
+		<tr bgcolor={BGCOLOR}>
+			<td><font size=2>{DATE}</font></td>
+			<td><font size=2>{TYPE}</font></td>
+			<td><font size=2>{DESC}</font></td>
+			<td align=right><font size=2>{AMOUNT}</font></td>
+		</tr>
+		<!-- END: history -->
+		</table>
+	</td>
+</tr>
+</table>
+
+<!-- END: main -->

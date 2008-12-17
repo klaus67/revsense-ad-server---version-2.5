@@ -1,0 +1,19 @@
+<!-- BEGIN: main -->
+Dear {USER},
+
+Your advertising account with {SITENAME} is running low. 
+Please login to add funds to your account so that your
+ads will continue to run. 
+
+You can login here:
+{URL}/index.php?section=user&action=login
+
+As a reminder, you login and password are:
+Username: {LOGIN}
+Password: {PASSWORD}
+
+Best regards
+{SITENAME}
+{SITEEMAIL}
+{URL}
+<!-- END: main -->

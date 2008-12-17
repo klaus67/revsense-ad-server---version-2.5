@@ -1,0 +1,22 @@
+<!-- BEGIN: main -->
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td bgcolor=#333333>
+<table width=100% border=0 cellspacing=1 cellpadding=3>
+<tr bgcolor=#CCCCCC>
+	<td><b>@@Publisher@@</b></td>
+	<td><b>@@Balance@@</b></td>
+</tr>
+<!-- BEGIN: list -->
+<tr bgcolor={BGCOLOR}>
+	<td><a href=?section=publisher&action=traffic&f[id]={ID}>{NAME}</a></td>
+	<td align=right>{BALANCE}</td>
+</tr>
+<!-- END: list -->
+<tr bgcolor=#CCCCCC>
+	<td>&nbsp;</td>
+	<td align=right>{BALANCE}</td>
+</tr>
+</table>
+</td></tr>
+</table>
+<!-- END: main -->

@@ -1,0 +1,26 @@
+<!-- BEGIN: main -->
+<table width=500 border=0 cellspacing=0 cellpadding=1>
+<tr><Td bgcolor=#333333>
+<table width=100% border=0 cellspacing=0 cellpadding=4 bgcolor=#EEEEEE>
+<form method=gett>
+<tr>
+	<td colspan=2>
+	<font color=red>{ERRORMSG}</font>
+	</td>
+</tr>
+<tr>
+	<td width=1><b>@@Amount@@&nbsp;@@$@@:</b></td>
+	<td width=99%>
+		<input type=text name=f[amount] value="{AMOUNT}" size=10>&nbsp;&nbsp;<font size=1><i>@@Minimum@@ @@$@@{MINIMUM}@@</i></font>
+	</td>
+</tr>
+<tr>
+	<td colspan=2><input type=submit value="@@Add Money@@ &raquo;"></td>
+</tr>
+<input type=hidden name=section value=account>
+<input type=hidden name=action value=paypal>
+</form>
+</table>
+</td></tr>
+</table>
+<!-- END: main -->

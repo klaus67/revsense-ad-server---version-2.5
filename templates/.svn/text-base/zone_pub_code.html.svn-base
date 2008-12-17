@@ -1,0 +1,108 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td>
+	<font size=3><b>@@Ad Code@@</b></font>
+	<br>
+	<font size=1>
+	@@You must use the ad code below to show the ads on your site(s).@@<br>
+	<a href=?section=pub&action=ads>&laquo; @@Return to Ad List@@</a><p>
+	</font>
+	</td>
+</tr>
+	<!-- BEGIN: keywords -->
+<tr>
+	<td>
+	<b>@@Remote Javascript Revsense&trade; Call:@@</b><br>
+	<font size=1>@@Just place this code on your site where you want the ads to appear.@@ 
+	@@This method is the easiest way to also perform search engine integration with AdRevenue@@<br>
+	@@It will automatically detect the keywords on your page within two impressions.@@<br> 
+	@@See the help for easy integration with search engines and content sites.@@ ##HELPSTR#revsense##
+	</font>
+	<br>
+	<pre>
+<font color=red>&lt;!--&nbsp;@@AdRevenue Ad Code@@&nbsp;--&gt;
+&lt;script src="{DOMAIN}index.php?section=sense&id={ZONE}&affid={AFFID}&q="&gt;&lt;/script&gt;</font>
+	</pre>
+	<hr size=1>
+	</td>
+</tr>	
+<tr>
+	<td>
+	<table width=80% border=0 cellspacing=0 cellpadding=1>
+	<tr><td bgcolor=#666666>
+	<table width=100% border=0 cellspacing=0 cellpadding=3 bgcolor=#FFFFEE>
+	<tr><td>
+	<font size=3><b>@@Showing ads with Keywords@@</b></font>
+	<br>
+	<font size=1>
+	@@You must be capable of adding keywords to the ad code(s) to be able to show ads. If you are using
+	a search engine, you must be able to modify your search engine code, to automatically add keywords
+	to the ad code.@@<br>
+	@@The following ad code fragment needs to be modified as follows, 
+	if for example, you want to show ads containing
+	the keyword@@ <b>@@microsoft word@@</b>:<br>
+	</font>
+	<pre>
+	...index.php?section=serve&zone=2&keyword=<font color=red>@@micrsoft@@%20@@word@@</font>&output=js...</pre>
+	<font size=1>
+	@@Note that you must encode compound keyword. For example, the phrase <b>microsoft word</b> should
+	be "encoded" any of the possible ways:@@ <b>@@microsoft@@+@@word@@</b> @@or even@@ <b>@@microsoft@@%20@@word@@</b>. @@For more
+	about encoding, please@@ 
+	<A href="http://www.blooberry.com/indexdot/html/topics/urlencoding.htm" target="new">@@visit this site@@</A>.
+	</font>
+	</font>
+	</td></tr>
+	</table>
+	</td></tr>
+	</table>
+	</td>
+</tr>
+	<!-- END: keywords -->
+
+<tr>
+	<td>
+	<b>@@Remote Javascript Call:@@</b><br>
+	<font size=1>@@This is the easiest and most popular way to show ads anywhere.@@<br>
+	@@Use this format if you want minimum hassle and easy integration into your site(s).@@
+	</font>
+	<br>
+	<pre>
+<font color=red>&lt;!--&nbsp;@@AdRevenue Ad Code@@&nbsp;--&gt;
+&lt;script src="{URL}&output=js"&gt;&lt;/script&gt;</font>
+	</pre>
+	<hr size=1>
+	</td>
+</tr>
+<tr>
+	<td>
+	<b>@@Raw HTML Call@@:</b><br>
+	<font size=1>@@Use this URL to get the ads in Raw HTML format@@.<br>
+	@@By using this code, your other programs can grab the html code
+	from AdRevenue and incorporate it directly into your layout@@.
+	</font>
+	<br>
+	<pre>
+<font color=red>{URL}&output=html</font>
+	</pre>
+	<hr size=1>
+	</td>
+</tr>
+<tr>
+	<td>
+	<b>@@XML Call@@:</b><br>
+	<font size=1>@@Use this URL to get the ads in XML format@@.<br> 
+	@@You can then use any program to parse the XML and display
+	the ads in whatever way you want. This option gives you
+	the maximum flexibility, but the most programming work.@@
+	</font>
+	<br>
+	<pre>
+<font color=red>{URL}&output=xml</font>
+	</pre>	
+	</td>
+</tr>
+</table>
+<!-- END: main -->

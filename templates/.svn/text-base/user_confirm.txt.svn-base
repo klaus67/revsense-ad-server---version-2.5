@@ -1,0 +1,13 @@
+<!-- BEGIN: main -->
+@@Welcome to@@ ##NAME##.
+
+@@You will need to click the links below to activate your advertising account@@:
+##URL##index.php?section=user&action=activate&zid={ZID}
+
+@@Once your account has been activated, you will be able to login and place ads@@.
+
+@@Thank you!@@
+##NAME##
+##EMAIL##
+##URL##
+<!-- END: main -->

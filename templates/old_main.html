@@ -1,0 +1,114 @@
+<!-- BEGIN: main -->
+<html>
+<head>
+<title>{TITLE}</title>
+{META}
+<style>
+	INPUT, TEXTAREA, SELECT { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 8pt; }
+	TD { font-family: Verdana,Arial, Helvetica, Verdana,sans-serif; font-size: 9pt; }
+	body {  font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 9pt
+</style>
+
+<script>
+function openpopup(url){
+	winpops=window.open(url,"","width=500,height=600,scrollbars=1,resizable=1,statusbar=1,toolbar=0,menubar=0")
+}
+</script>
+
+</head>
+<body>
+
+<table width=100% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<td width=300 bgcolor=#CCCC66 align=center>
+<font size=2><b>##NAME##</b></font>
+</td>
+
+<td width=1 bgcolor=#339999 style="border-left: 1px solid #999999;">&nbsp;</td>
+
+<td width=90% valign=top bgcolor=#339999>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td width=99%><font size=2 color=black><b>{HEADING}</b></font></td>
+	<Td width=1>{DATE}&nbsp;|&nbsp;##HELPSTR###</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td width=300 valign=top>
+<br>
+<!-- menu area -->
+<font size=2><b>@@Menu@@</b></font><br>
+<font size=2>
+<!-- BEGIN: logged_out -->
+&nbsp;&nbsp;<a href=?section=user&action=login>@@Login@@</a><p> 
+<b>Registration</b><br>
+&nbsp;&nbsp;<a href=?section=user&action=register&t=adv>@@Advertisers@@</a><Br>
+&nbsp;&nbsp;<a href=?section=user&action=register&t=pub>@@Publishers@@</a><p>
+<!-- END: logged_out -->
+
+<!-- BEGIN: advertiser -->
+&nbsp;&nbsp;<a href=?section=ads&action=edit><font color=red>@@Create an Ad@@</font></a><br>
+&nbsp;&nbsp;<a href=?section=ads>@@My Ads@@</a><br>
+&nbsp;&nbsp;<a href=?section=account>@@My Account@@</a><br>
+&nbsp;&nbsp;<a href=?section=profile>@@My Profile@@</a><p>
+&nbsp;&nbsp;@@Balance@@: @@$@@{BAL}<p>
+&nbsp;&nbsp;<a href=?section=user&action=logout><b>@@Logout@@</b></a><p>
+<p>
+<!-- END: advertiser -->
+
+<!-- BEGIN: publisher -->
+&nbsp;&nbsp;<a href=?section=pub&action=ads><font color=red>@@Get Ad Code@@</font></a><br>
+&nbsp;&nbsp;<a href=?section=pub&action=stats>@@Stats@@</a><br>
+&nbsp;&nbsp;<a href=?section=pub&action=history>@@History@@</a><br>
+&nbsp;&nbsp;<a href=?section=profile>@@My Profile@@</a><p>
+&nbsp;&nbsp;@@Balance@@: @@$@@{BAL}<p>
+&nbsp;&nbsp;<a href=?section=user&action=logout><b>@@Logout@@</b></a><p>
+<p>
+<!-- END: publisher -->
+
+<!-- BEGIN: admin -->
+<font size=2><b>Administration</b></font><br>
+&nbsp;&nbsp;<a href=?section=zone&action=zone_ads&f[id]=0>@@Ads@@</a><br> 
+&nbsp;&nbsp;<a href=?section=zone>@@Zones@@</a><br>
+&nbsp;&nbsp;<a href=?section=useradmin>@@Users@@</a><br>
+&nbsp;&nbsp;<a href=?section=pubadmin>@@Publishers@@</a><br>
+&nbsp;&nbsp;<a href=?section=settings>@@Settings@@</a><p>
+&nbsp;&nbsp;<a href="http://www.w3matter.com/faq">@@Support@@</a><br>
+<p>
+<!-- END: admin -->
+
+<b>Help</b><br>
+&nbsp;&nbsp;<a href=?section=doc&action=faq>@@FAQ@@</a><br> 
+&nbsp;&nbsp;<a href=?section=doc&action=terms>@@Terms@@</a><br>
+&nbsp;&nbsp;<a href=?section=contact>@@Contact Us@@</a><p>
+
+
+<img src=images/pixel.gif width=120 height=1 border=0>
+</td>
+<td width=1 style="border-left: 1px solid #999999;">&nbsp;</td>
+
+<td width=90% valign=top>
+<!-- body area -->
+&nbsp;<p>
+{BODY}
+</td>
+</tr>
+</table>
+
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+	<td style="border-top: solid 1px #999999" align=center>
+	<br>
+	<font size=1>&copy; {YEAR} ##NAME## | <a href=?section=contact>Contact Us</a> | <a href=?section=doc&action=terms>Advertising Terms & Conditions</a></font>
+	<p>
+	<!-- You cannot remove this powered by link without receiving permission from W3matter.com -->
+	<font size=1><a href="http://www.w3matter.com">Powered by AdRevenue</a> &copy; {YEAR} W3matter LLC</font>
+	</td>
+</tr>
+</table>
+</body>
+</html>
+<!-- END: main -->

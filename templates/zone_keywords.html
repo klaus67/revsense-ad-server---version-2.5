@@ -1,0 +1,48 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=5>
+<form method=post>
+<tr>
+	<td width=1 valign=top><b>@@Keywords@@:</b></td>
+	<td width=99%>
+		<input type=checkbox value=1 name="f[keywords_enable]" {KEYWORDS_ENABLE}> @@Enable keyword targeting@@<br>
+		<font size=1>
+		@@You can enable keyword matching of ads in this zone@@.<br>
+		@@If you do this, then only ads with keywords will appear@@.<br>
+		@@You must enable the ad code to show keywords@@.
+		</font>
+	</td>
+</tr>
+<input type=hidden name="f[keywords_fuzzy]" value="0" />
+<tr>
+	<td width=1 valign=top>@@Allow only these Keywords@@:</td>
+	<td width=99%>
+		<textarea name=f[keywords] rows=5 cols=50 wrap=none>{KEYWORDS}</textarea><br>
+		<font size=1>
+		@@You can enter keywords one per line. If you do this@@,<br>
+		@@then advertisers will only be able to choose from these keywords@@<br>
+		@@when they create or edit an ad@@.
+		</font>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Max Keywords@@:</td>
+	<td width=99%>
+		<input type=text name=f[keywords_max] size=8 value="{KEYWORDS_MAX}"><Br>
+		<font size=1>
+		@@Choose the maximum number of pre-defined keywords above, that an advertiser can use.@@<br>
+		@@Set to 0 (zero) for unlimited.@@
+		</font>
+	</td>
+</tr>
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><input type=submit value="Update" name=f[submit]></td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_keywords>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

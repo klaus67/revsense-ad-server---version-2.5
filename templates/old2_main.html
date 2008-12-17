@@ -1,0 +1,100 @@
+<!-- BEGIN: main -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+	{META}
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>{TITLE}</title>
+	<!--[if IE]>
+	<link rel="stylesheet" href="ie_layout.css" type="text/css" />
+	<![endif]-->
+	<link rel="stylesheet" href="moz_layout.css" type="text/css" />
+	<link rel="stylesheet" href="content.css" type="text/css" />
+</head>
+<body>
+<div id="adrevenue-banner">
+    <h1>&nbsp;<font color=white>##NAME##</font></h1>
+</div> 
+<div id="adrevenue-nav"></div>
+
+<div class="section-help">
+<!-- my info BEGIN -->
+
+<div id="nav-util">
+  <div id="login-info" style="float-left: width: 58%;">
+  <!-- BEGIN: admin -->
+  	<b>@@Admin@@:</b>
+	  <a href=?section=zone&action=zone_ads&f[id]=0>@@Ads@@</a>
+	  | <a href=?section=zone>@@Zones@@</a>
+	  | <a href=?section=useradmin>@@Advertisers@@</a>
+	  | <a href=?section=pubadmin>@@Publishers@@</a>
+	  | <a href=?section=settings>@@Settings@@</a>
+  <!-- END: admin -->   
+  </div>
+  <div id="balance" style="float-right: width: 30%; text-align: right;">
+	@@Ad Balance@@: {BAL}<!-- BEGIN: pub_balance -->, @@Earnings@@: <font color="green">{PBAL}</font>
+	<!-- END: pub_balance -->
+  </div>
+  <div style="clear: both;"></div>
+</div>
+<!-- BEGIN: warning -->
+<div id="warning">{WARNING}</div>
+<br/>
+<!-- END: warning -->
+<!-- BEGIN: notice -->
+<div id="notice">{NOTICE}</div>
+<br/>
+<!-- END: notice -->
+
+<!-- my info END -->
+
+<span id="menu-label">Site Navigation:</span>    
+<ul id="menu">
+  <li id="nav-help"><a href="index.php">@@Home@@</a>
+  <!-- BEGIN: logged_out -->
+  <li id="nav-help"><a href="?section=user&action=login">@@Login@@</a></li>
+  <li id="nav-help"><a href="?section=user&action=register&t=adv">@@Advertisers@@</a></li>
+  <li id="nav-help"><a href="?section=user&action=register&t=pub">@@Publishers@@</a></li>  
+  <!-- END: logged_out -->
+  
+  <!-- BEGIN: publisher -->
+  <li id="nav-help"><a href="?section=ads">@@Ads@@</a></li>  
+  <li id="nav-help"><a href="?section=ads&action=edit">@@Create Ad@@</a></li>
+  <li id="nav-help"><a href="?section=account">@@Ad Account@@</a></li>
+
+  <li id="nav-help"><a href="?section=pub&action=ads" style="color: brown;">@@Publisher Code@@</a></li>  
+  <li id="nav-help"><a href="?section=pub&action=stats" style="color: brown;">@@Earnings@@</a></li>
+  <li id="nav-help"><a href="?section=profile">@@Profile@@</a></li>  
+  <li id="nav-help"><a href="?section=user&action=logout">@@Logout@@</a></li>  
+  <!-- END: publisher -->
+  
+  <!-- BEGIN: advertiser -->
+  <li id="nav-help"><a href="?section=ads">@@Ads@@</a></li>  
+  <li id="nav-help"><a href="?section=ads&action=edit">@@Create an Ad@@</a></li>
+  <li id="nav-help"><a href="?section=account">@@Account@@</a></li>
+  <li id="nav-help"><a href="?section=profile">@@Profile@@</a></li>  
+  <li id="nav-help"><a href="?section=user&action=logout">@@Logout@@</a></li>
+  <!-- END: advertiser -->
+  
+  <li id="nav-help"><a href="?section=doc&action=faq">@@FAQ@@</a></li>
+  <li id="nav-help"><a href="?section=doc&action=terms">@@Terms@@</a></li>
+  <li id="nav-help"><a href="?section=contact">@@Contact@@</a></li>  
+  
+</ul>
+
+<div id="adrevenue-content"> 
+
+<h1>{HEADING}</h1>
+{BODY}
+</div>
+
+<div id="adrevenue-footer">
+	<br>
+	<font size=1>&copy; {YEAR} ##NAME## | <a href=?section=contact>Contact Us</a> | <a href=?section=doc&action=terms>Advertising Terms & Conditions</a></font>
+	<p>
+	<!-- You cannot remove this powered by link without receiving permission from W3matter.com -->
+	<font size=1><a href="http://www.w3matter.com">Powered by Revsense &trade;</a> &copy; {YEAR} W3matter LLC</font>
+</div>
+</body>
+</html>
+<!-- END: main -->

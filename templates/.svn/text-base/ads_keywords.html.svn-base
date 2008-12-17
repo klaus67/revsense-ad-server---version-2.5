@@ -1,0 +1,61 @@
+<!-- BEGIN: main -->
+{ADS_MENU}<p>
+		<table width="100%" border="0" cellpadding="8" style="background-color: #EEE; border-bottom: 1px dotted #999;">
+		<tr bgcolor=#EEEEEE>
+			<th colspan=10>
+				<table width=100% border=0 cellspacing=0 cellpadding=0>
+				<form method=get>
+				<tr>
+					<td width=1><b>@@Period@@</b>&nbsp;</td>
+					<td width=1>
+						<select name=f[period]>
+							{PERIODLIST}
+						</select>
+					</td>
+					<td width=1>&nbsp;&nbsp;@@Keyword@@&nbsp;</td>
+					<Td width=1>
+						<select name=f[kid]>
+							{KEYWORDLIST}
+						</select>
+					</td>
+					<td width=1>&nbsp;</td>
+					<td width=1><input type=submit value="Go"></td>
+					<td width=99% align=center>{PERIOD}&nbsp;</td>
+				</tr>
+				<input type=hidden name=section value=ads>
+				<input type=hidden name=action value=stats>
+				<input type=hidden name=f[id] value="{ID}">
+				</form>
+				</table>
+			</th>
+		</tr>
+		<tr bgcolor=#FFFFCC>
+			<td><b>@@Date@@</b></td>
+			<td align=right><b>@@Clicks@@</b></td>
+			<td align=right><b>@@Views@@</b></td>
+			<td align=right><b>@@CTR@@</b></td>
+			<td align=right><b>@@Orders@@</b></td>
+			<td align=right><b>@@Spend@@</b></td>
+		</tr>
+		<!-- BEGIN: list -->
+		<tr bgcolor={BGCOLOR}>
+			<td>{DATE}</td>
+			<td align=right>{CLICKS}</td>
+			<td align=right>{VIEWS}</td>
+			<td align=right>{CTR}%</td>
+			<td align=right>{ORDERS}</td>
+			<td align=right>{SPEND}</td>
+		</tr>
+		<!-- END: list -->
+		<!-- BEGIN: totals -->
+		<tr bgcolor=#CCCCCC>
+			<td align=right><b>@@TOTALS@@</b> :</td>
+			<td align=right><b>{TCLICKS}</b></td>
+			<td align=right><b>{TVIEWS}</b></td>
+			<td align=right><b>{TCTR}@@%@@</b></td>
+			<td align=right><b>{TORDERS}</b></td>
+			<td align=right><b>@@$@@{TSPEND}</b></td>
+		</tr>
+		<!-- END: totals -->
+		</table>
+<!-- END: main -->

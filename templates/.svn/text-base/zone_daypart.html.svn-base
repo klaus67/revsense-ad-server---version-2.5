@@ -1,0 +1,60 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=5>
+<form method=post>
+<tr>
+	<td width=1 valign=top><b>@@Dayparting@@:</b></td>
+	<td width=99%>
+		<input type=checkbox value=1 name="f[daypart_enable]" {DAYPART_ENABLE}> @@Enable Dayparting@@<br>
+		<font size=1>
+		@@You can specify which days and hours of each week@@<br>
+		@@ads in this zone should run@@.
+		</font>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top><b>@@Days@@:</b></td>
+	<td width=99%>
+	<table width=100 border=0 cellspacing=2 cellpadding=1>
+	<Tr bgcolor="#EEEEEE">
+		<td width=1 align=center><font size=1>@@Sun@@</font></td>	
+		<td width=1 align=center><font size=1>@@Mon@@</font></td>
+		<td width=1 align=center><font size=1>@@Tue@@</font></td>
+		<td width=1 align=center><font size=1>@@Wed@@</font></td>
+		<td width=1 align=center><font size=1>@@Thu@@</font></td>
+		<td width=1 align=center><font size=1>@@Fri@@</font></td>
+		<td width=1 align=center><font size=1>@@Sat@@</font></td>
+	</Tr>
+	<Tr bgcolor="#FFFFCC">
+		<!-- BEGIN: days -->
+		<td width=1 align=center><input type="checkbox" value="{DAY}" name="f[daypart_days][]" {DAYPART_DAY}></td><!-- END: days -->
+	</Tr>	
+	</table>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top><b>@@Hours@@:&nbsp;({TZ})</b></td>
+	<td width=99%>
+	<table width=100 border=0 cellspacing=1 cellpadding=1>
+	<tr bgcolor="#EEEEEE">
+		<!-- BEGIN: hour_title -->
+		<td width=1 align=center><font size=1>{HOUR_TITLE}</font></td><!-- END: hour_title -->
+	</tr>
+	<tr bgcolor="#FFFFCC">
+		<!-- BEGIN: hours -->
+		<td width=1 align=center><input type=checkbox value="{HOUR}" name="f[daypart_hours][]" {DAYPART_HOUR}></td><!-- END: hours --> 
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><input type=submit value="Update" name=f[submit]></td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_daypart>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

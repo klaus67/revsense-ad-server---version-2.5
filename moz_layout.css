@@ -1,0 +1,625 @@
+body {
+	font-size: 11px;
+	font-family: bitstream vera sans,sans-serif;
+	margin: 0;
+	padding: 0;
+	/* (The background color is specified elsewhere, so do a global replacement if it ever changes) */
+	background-color: #d9d9d9;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    background-color: #fff;
+    color: #000;
+}
+
+textarea {
+    background-color: #fff;
+    color: #000;
+}
+
+select {
+    background-color: #fff;
+}
+
+a:link {
+	color: #900;
+}
+
+a:visited {
+	color: #48468f;
+}
+
+a:hover {
+	color: #f20;
+}
+
+a[name] {
+	color: #900;
+	text-decoration: none;
+}
+
+#adrevenue-top {
+    /* position: fixed;
+    width: 100%; */
+}
+
+#adrevenue-banner {
+	background-color: #cc0000;
+	height: 45px;
+}
+
+#adrevenue-banner img {
+	border: 0;
+	vertical-align: middle;
+}
+
+#adrevenue-banner-logo {
+	/* position is offset by the header padding amount */
+	position: absolute;
+	left: 15px;
+	top: 2px;
+	z-index: 3;
+}
+
+#adrevenue-banner-items {
+	/* position is offset by the header padding amount */
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	text-align: center;
+	display: inline;
+    background-color: #660000;
+    border: 1px solid #000;
+    width: 260px;
+}
+
+#adrevenue-banner-items a {
+	color: #000;
+	text-decoration: none;
+	padding: 7pt;
+	font-size: 0.8em;
+}
+
+#adrevenue-banner-items a:hover, #adrevenue-header-search-button:hover {
+	color: #f20;
+	cursor: pointer;
+}
+
+/* #adrevenue-banner-items img {
+	margin-right: 1px;
+	width: 36px;
+	height: 36px;
+} */
+
+#adrevenue-banner-search {
+	height: 25px;
+}
+
+#adrevenue-banner-search-entry {
+	vertical-align: top;
+	margin: 0.65em 4px 0 10px;
+	padding: 2px 4px;
+	background-color: #f5f5f5;
+	border: 1px solid #999;
+	font-size: 0.8em !important;
+}
+
+#adrevenue-banner-search-entry:focus {
+	background-color: #fff;
+	border: 1px solid #555;
+}
+
+#adrevenue-banner-items form {
+	float: right;
+}
+
+#adrevenue-banner-items input {
+	font-size: 0.85em;
+}
+
+#adrevenue-header {
+	background-color: #000000;
+	height: 25px;
+    font-size: 1.0em;
+    color: #ffffff;
+    padding-top: 3px;
+    text-align: center;
+}
+
+#adrevenue-header a {
+	text-decoration: none;
+}
+
+#adrevenue-header a:hover {
+	cursor: pointer;
+}
+
+#adrevenue-nav {
+	margin: 0;
+	padding: 0;
+	background-color: #999999;
+	font-size: 0;
+	height: 5px;
+	border-top: 1px solid #000;
+}
+
+#adrevenue-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#adrevenue-nav li {
+	display: inline;
+	list-style: none;
+	padding: 0 5pt;
+}
+
+#adrevenue-nav li + li {
+	padding-left: 8pt;
+	border-left: 1px solid #99a5bf;
+}
+
+#adrevenue-nav a {
+	color: #c5ccdb;
+	text-decoration: none;
+}
+
+#adrevenue-nav a:hover {
+	color: #fff;
+}
+
+#adrevenue-side-left {
+	/* position: fixed; */
+    position: absolute;
+	z-index: 2;
+	width: 9.5em;
+	/* Space down for the approx line height (fonts) */
+	left: 10px;
+}
+
+#adrevenue-side-right {
+	position: absolute;
+	z-index: 1;
+	width: 13em;
+	right: 12px;
+	padding-top: 3px;
+}
+
+#adrevenue-side-left, #adrevenue-side-right {
+	top: 2px;
+	/* add to the top margin to compensate for the fixed sizes */
+	margin-top: 87px;
+	color: #555;
+	font-size: 0.9em;
+}
+
+#adrevenue-side-right ul {
+	list-style: square inside;
+	padding: 0;
+	margin: 0;
+}
+
+/* Bugzilla My Info bar */
+
+#nav-util {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+
+#login-info {
+    display: inline;
+    float: left;
+    font-size: small;
+    font-weight: bold;
+}
+
+#login-label {
+    color: #999;
+    font-weight: bold;
+}
+
+#balance {
+    display: inline;
+    float: right;
+    color: #000;
+    font-size: small;
+    font-weight: bold;
+}
+
+#goto input {
+    border: 1px solid #999;
+}
+
+#preset-queries {
+    font-size: small;
+    padding: 2px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+#preset-queries-label {
+    color: #999;
+    font-weight: bold;
+}
+
+/* Bugzilla tab navigation bar */
+
+#menu {
+    border-bottom : 1px solid #999;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding-bottom : 19px;
+    padding-left : 10px;
+}
+
+#menu-label {
+    display: none;
+}
+
+#menu ul, #menu li  {
+    display : inline;
+    list-style-type : none;
+    margin : 0;
+    padding : 0;
+}
+
+#menu a:link, #menu a:visited   {
+    background : #999;
+    border : 1px solid #999;
+    color : #fff;
+    float : left;
+    line-height : 14px;
+    margin-right : 8px;
+    padding : 2px 10px 2px 10px;
+    text-decoration : none;
+}
+
+#menu a:link.active, #menu a:visited.active {
+    background : #fff;
+    border-bottom : 1px solid #fff;
+    color : #000;
+}
+
+#menu a:hover   {
+    background: #ababab;
+}
+
+div.section-home #menu li#nav-home a, 
+div.section-new #menu li#nav-new a,
+div.section-show #menu li#nav-show a,
+div.section-query #menu li#nav-query a,
+div.section-reports #menu li#nav-reports a,
+div.section-help #menu li#nav-help a,
+div.section-prefs #menu li#nav-prefs a,
+div.section-front #menu li#nav-front a,
+div.section-logout #menu li#nav-logout a,
+div.section-feature #menu li#nav-feature a,
+div.section-newlogin #menu li#nav-newlogin a,
+div.section-login #menu li#nav-login a,
+div.section-admin #menu li#nav-admin a {
+    background : #fff;
+    border-bottom : 1px solid #fff;
+    color : #000;
+}
+
+#menu #subnav-new,
+#menu #subnav-query, 
+#menu #subnav-reports, 
+#menu #subnav-prefs,
+#menu #subnav-admin {
+    display : none;
+    width: 90%;
+}
+
+div.section-new #menu ul#subnav-new, 
+div.section-query #menu ul#subnav-query,
+div.section-reports #menu ul#subnav-reports,
+div.section-prefs #menu ul#subnav-prefs,
+div.section-admin #menu ul#subnav-admin {   
+    display : inline;
+    left : 15px;
+    position : absolute;
+    top : 135px;
+}
+
+div.section-new #menu ul#subnav-new a, 
+div.section-query #menu ul#subnav-query a,
+div.section-reports #menu ul#subnav-reports a,
+div.section-prefs #menu ul#subnav-prefs a,
+div.section-admin #menu ul#subnav-admin a {
+    background : #fff;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    color: #000;
+    line-height: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 3px 10px 3px 10px;
+    text-decoration:none;
+}
+
+div.section-new #menu ul#subnav-new a:hover,
+div.section-query #menu ul#subnav-query a:hover,
+div.section-reports #menu ul#subnav-reports a:hover,
+div.section-prefs #menu ul#subnav-prefs a:hover,
+div.section-admin #menu ul#subnav-admin a:hover {
+    background : #ababab;
+    color: #fff;
+}
+
+#menu ul a:hover {
+    color: #fff !important;
+}
+
+/* Left-side navigation side bar */
+#adrevenue-side-nav-label {
+	font-weight: bold;
+    color: #222;
+}
+
+#adrevenue-side-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #ababab;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #000000;
+}
+
+#adrevenue-side-nav li {
+	margin: 0;
+	padding: 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #000000;
+}
+
+#adrevenue-side-nav a {
+	margin: 0;
+	color: #ffffff;
+	display: block;
+	text-decoration: none;
+	padding: 4px 6px;
+}
+
+#adrevenue-side-nav a:hover {
+	background-color: #999999;
+	color: #fff;
+}
+
+#adrevenue-side-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#adrevenue-side-nav ul li {
+    list-style: none;
+	border-top: 0; 
+	background-color: #ababab;
+	/* IE/Win gets upset if there is no bottom border... Go figure. */
+	border-bottom: 0;
+}
+
+#adrevenue-side-nav ul li a {
+	padding-left: 18px;
+	color: #fff;
+    font-size: 0.9em;
+}
+
+#adrevenue-side-nav ul li a:hover {
+	background-color: #999999;
+}
+
+#adrevenue-side-nav ul ul li {
+    border-top: 0;
+    background-color: #ababab;
+    /* IE/Win gets upset if there is no bottom border... Go figure. */
+}
+
+#adrevenue-side-nav ul ul li a {
+	padding-left: 12px;
+}
+
+#adrevenue-side-nav strong a {
+	font-weight: normal;
+	color: #fff !important;
+	background-color: #000000;
+}
+
+#adrevenue-side-nav strong a:hover {
+	background-color: #000000 !important;
+}
+
+#adrevenue-side-goto-bug {
+    margin-left: 0; 
+    padding-top: 10px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+#adrevenue-side-preset-queries {
+    margin-left: 0;
+    padding-top: 0px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+#adrevenue-side-preset-queries ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+#adrevenue-side-login {
+    margin-left: 0;
+    padding-top: 10px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* content containers */
+#adrevenue-middle-one, #adrevenue-middle-two, #adrevenue-middle-three {
+	font-size: 0.9em;
+	/* position: relative; */ /* relative to utilize z-index */
+	width: auto;
+	min-width: 120px;
+	margin: 10px;
+	z-index: 3; /* content can overlap when the browser is narrow */
+}
+
+#adrevenue-middle-two, #adrevenue-middle-three {
+	margin-left: 9.25em;
+	padding-left: 24px;
+}
+
+#adrevenue-middle-three {
+	margin-right: 13em;
+	padding-right: 24px;
+}
+
+#adrevenue-content {
+    background: #fff;
+    border: 1px solid #999;
+    border-top: none;
+    clear: both;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+	font-size: 10px;
+}
+
+#adrevenue-content > .adrevenue-corner-bottom { top: 0 }
+
+.adrevenue-corner-tl, .adrevenue-corner-tr, .adrevenue-corner-bl, .adrevenue-corner-br {
+	background-color: #d9d9d9;
+	position: relative;
+	width: 19px;
+	height: 19px;
+	/* The following line is to render PNGs with alpha transparency within IE/Win, using DirectX */
+	/* Work-around for IE6/Mac borkage (Part 1) */
+	display: none;
+}
+
+.adrevenue-corner-tl, .adrevenue-corner-bl { float: left; left: 0px; }
+.adrevenue-corner-tr, .adrevenue-corner-br { float: right; right: 0px; }
+.adrevenue-corner-tl, .adrevenue-corner-tr { top: 0px; }
+.adrevenue-corner-bl, .adrevenue-corner-br { bottom: 0px; margin-top: -19px; /* Opera fix (part 1) */ top: -18px;}
+
+html>body .adrevenue-corner-tl { background: #d9d9d9 url("/images/corner-tl.png") no-repeat left top; }
+html>body .adrevenue-corner-tr { background: #d9d9d9 url("/images/corner-tr.png") no-repeat right top; }
+html>body .adrevenue-corner-bl { background: #d9d9d9 url("/images/corner-bl.png") no-repeat left bottom; }
+html>body .adrevenue-corner-br { background: #d9d9d9 url("/images/corner-br.png") no-repeat right bottom; }
+
+.adrevenue-corner-tl { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/corner-tl.png',sizingMethod='scale'); }
+.adrevenue-corner-tr { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/corner-tr.png',sizingMethod='scale'); }
+.adrevenue-corner-br { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/corner-br.png',sizingMethod='scale'); }
+.adrevenue-corner-bl { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/corner-bl.png',sizingMethod='scale'); }
+
+/* \*/
+.adrevenue-corner-tl, .adrevenue-corner-tr, .adrevenue-corner-bl, .adrevenue-corner-br {
+	/* Restore the view for everything but IE6/Mac (part 2 of the "IE/Mac fix") */
+	display: block;
+}
+/* */
+
+html*.adrevenue-corner-bl, html*.adrevenue-corner-br {
+	/* Compensate for Opera's inability to position some things correctly (Part 2) */
+	top: 0px;
+}
+
+.content { margin: 0 1em }
+
+#adrevenue-sidelist {
+	position: relative;
+	bottom: 3px;
+	margin: 0;
+	padding: 3px !important;
+	border: 1px solid #bbb;
+	background-color: #ccc;
+	border-radius: 2.5px;
+	-moz-border-radius: 2.5px;
+}
+
+#adrevenue-sidelist strong a {
+	font-weight: normal;
+	background-color: #555;
+	color: #fff;
+}
+
+#adrevenue-sidelist strong a:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+#adrevenue-sidelist li {
+	list-style-position: outside;
+	font-size: 0.9em;
+	list-style: none;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	padding: 0;
+}
+
+#adrevenue-sidelist li a {
+	text-decoration: none;
+	display: block;
+	padding: 6px 8px;
+	border-radius: 2.5px;
+	-moz-border-radius: 2.5px;
+}
+
+#adrevenue-sidelist li a:hover {
+	background-color: #999;
+	color: #eee;
+}
+
+#adrevenue-footer {
+	font-size: 0.75em;
+	text-align: center;
+	color: #777;
+	margin-bottom: 2em;
+}
+
+#button{
+    font: button;
+    font-weight: 900;
+    color: #fff;
+    background-color: #ababab;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+                                                                                                                               
+#button:hover, #button:focus {
+    background-color: #999999;
+    color: #fff;
+}
+                                                                                                                               
+#button:active {
+    background-color: #f1f7fe;
+    color: #40576c;
+}
+
+#adrevenue-printable {
+	text-align: center;
+	margin: 1em 0;
+	font-size: 0.85em;
+}
+
+
+#adrevenue-printable a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+<!-- BEGIN: main -->
+@@Dear@@ {NAME},
+
+@@Here is your login information@@:
+
+@@Email@@: {EMAIL}
+@@Password@@: {PASSWORD}
+
+@@Click on the URL below to login@@:
+##URL##index.php?section=user&action=login
+
+@@Best regards@@
+##NAME##
+##EMAIL##
+##URL##
+<!-- END: main -->

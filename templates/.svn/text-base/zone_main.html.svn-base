@@ -1,0 +1,83 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<br>
+<table width=100% border=0 cellspacing=0 cellpadding=5>
+<form method=post>
+<tr>
+	<td width=1><b>@@Name@@:</b></td>
+	<td width=99%><input type=text name=f[name] value="{NAME}" size=30></td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Zone Description@@:<br><font size=1><i>@@HTML and Images are Allowed@@</i></td>
+	<td width=99%>
+		<textarea name=f[description] rows=5 cols=60 wrap=virtual>{DESCRIPTION}</textarea>
+		<br>
+		<font size=1>
+		@@You can create a dedicated advertising link to this zone by copying the URL below@@:<br>
+		<a href="##URL##index.php?section=ads&action=adzone&id={ID}"><font color=red>##URL##index.php?section=ads&action=adzone&id={ID}</font></a>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td width=1>@@Template@@:</td>
+	<td width=99%><b>{STYLE}</b></td>
+</tr>
+<tr>
+	<td width=1 valign=top><b>@@Zone@@&nbsp;@@Status@@:</b></td>
+	<td width=99%>
+		<input type=radio value=1 name="f[status]" {STATUS_1}> @@Active@@<br>
+		<input type=radio value=2 name="f[status]" {STATUS_2}> @@Admin Ads Only - only admin can place ads@@<br>
+		<input type=radio value=0 name="f[status]" {STATUS_0}> @@Not Active@@
+	</td>
+</tr>
+<tr>
+	<Td width=1 valign=top><b>@@Approval@@:</b></Td>
+	<td width=99%>
+		<input type=radio value=1 name="f[auto_approve]" {AUTO_APPROVE_1}> @@Automatically approve ads when payment approved@@<br>
+		<input type=radio value=0 name="f[auto_approve]" {AUTO_APPROVE_0}> @@Manually Approve Ads@@<br>
+	</td>
+</tr>
+<tr>
+	<td width="1" valign="top"><b>@@Publishers&nbsp;Only@@</b></td>
+	<td width="99%">
+		<input type="checkbox" value="1" name="f[pub_only]" {PUB_ONLY} />
+	</td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<td width=1 valign=top><b>@@Rate@@&nbsp;@@Method@@:</b></td>
+	<td width=99%>
+		<input type=radio value=1 name=f[rtype] {RTYPE_1}> @@Fixed Rate Ads@@<br>
+		<input type=radio value=2 name=f[rtype] {RTYPE_2}> @@Bidded Ads@@ <i>(@@rate below will be minimum rate@@)</i><br>
+	</td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<td width=1><b>@@Unit@@&nbsp;@@Type@@:</b></td>
+	<td width=99%>
+		<select name=f[rate_type]>
+			{RATE_TYPE}
+		</select>
+	</td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<td width=1><b>@@Rate@@:($)</b></td>
+	<td width=99%><input type=text name=f[rate] value="{RATE}" size=8></td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<Td width=1>@@Affiliate@@&nbsp;%:</td>
+	<td width=99%><input type=text name=f[aff_percent] value="{AFF_PERCENT}" size=5>% <font size=1>@@Make 0 for no affiliate payouts@@. Or <a href="?section=zone&action=rates&f[id]={ID}">@@Setup Tiered Rates@@</a>
+	</td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<td width=1>@@Units@@:</td>
+	<td width=99%><input type=text name=f[units] value="{UNITS}" size=10> <font size=1>@@Number of units after ad will expire. Set to zero for unlimited@@
+</tr>
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><input type=submit value="{BUTTON}"></td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_define>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

@@ -1,0 +1,131 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td>
+	<h2>@@Ad Code@@</h2>
+	<font size=1>
+	@@You must use the ad code below to show the ads on your sites.
+	You can place this ad code on any other site,
+	and ads will show up there, served from your site.@@
+	</font>
+	</td>
+</tr>
+
+<!-- BEGIN: keywords -->
+<tr>
+	<td>
+	<b>@@Remote Javascript Revsense&trade; Call:@@</b><br>
+	<font size=1>@@Just place this code on your site where you want the ads to appear.@@ 
+	@@This method is the easiest way to also perform search engine integration with AdRevenue@@<br>
+	@@It will automatically detect the keywords on your page within two impressions.@@<br> 
+	@@See the help for easy integration with search engines and content sites.@@
+	</font>
+	<br/>
+	<textarea name=adcode1 rows=3 style="width: 100%;"><!-- RevSense Ad Code -->
+&lt;script src="{DOMAIN}index.php?section=sense&id={ZONE}&q="&gt;&lt;/script&gt;		
+	</textarea>
+	<br/>&nbsp;
+	</td>
+</tr>
+<tr>
+	<td>
+	<table width=100% border=0 cellspacing=0 cellpadding=1>
+	<tr><td bgcolor=#666666>
+	<table width=100% border=0 cellspacing=0 cellpadding=3 bgcolor=#FFFFEE>
+	<tr><td>
+	<font size=3><b>@@Keyword Implementation Instructions@@</b></font>
+	<br>
+	<font size=1>
+	@@Because you have chosen to use keywords in this zone. No ads will display, unless you have added keywords
+	to each ad in this zone, and have added keyword to the ad code.
+	You must be capable of adding keywords to the ad code(s) shown below to get this to work. If you are using
+	a search engine, you must be able to modify your search engine code, to automatically add keywords
+	to the ad code.@@<br>
+	@@The following ad code fragment needs to be modified as follows, 
+	if for example, you want to show ads containing
+	the keyword@@ <b>@@microsoft word@@</b>:<br>
+	</font>
+	<pre>
+	...index.php?section=serve&zone=2&keyword=<font color=red>@@micrsoft@@%20@@word@@</font>&output=js...</pre>
+	<font size=1>
+	@@Note that you must encode compound keyword. For example, the phrase <b>microsoft word</b> should
+	be "encoded" any of the possible ways:@@ <b>@@microsoft@@+@@word@@</b> @@or even@@ <b>@@microsoft@@%20@@word@@</b>. @@For more
+	about encoding, please@@ 
+	<A href="http://www.blooberry.com/indexdot/html/topics/urlencoding.htm" target="new">@@visit this site@@</A>.
+	</font>
+	</font>
+	</td></tr>
+	</table>
+	</td></tr>
+	</table>
+	</td>
+</tr>
+<!-- END: keywords -->
+
+<tr>
+	<td>
+	<b>@@Remote Javascript Call:@@</b><br>
+	<font size=1>@@This is the easiest and most popular way to show ads anywhere.@@<br>
+	@@Use this format if you want minimum hassle and easy integration
+	into any site.@@
+	</font>
+	<br>
+	<textarea name="ad2" rows=3 style="width: 100%;"><!-- RevSense Ad Code -->
+&lt;script src="{URL}&output=js"&gt;&lt;/script&gt;
+	</textarea>
+	<br/>&nbsp;
+	</td>
+</tr>
+<tr>
+	<td>
+	<b>@@Raw HTML Call@@:</b><br>
+	<font size=1>@@Use this URL to get the ads in Raw HTML format@@.<br>
+	@@By using this URL, your other programs can grab the html ad code
+	from RevSense and incorporate it directly into your layout@@.
+	</font>
+	<br>
+	<textarea name="ad3" rows=1 style="width: 100%;">{URL}&output=html</textarea>
+	<br/>&nbsp;
+	</td>
+</tr>
+<tr>
+	<td>
+	<b>@@XML Call@@:</b><br>
+	<font size=1>@@Use this URL to get the ads in XML format@@.<br> 
+	@@You can then use any program to parse the XML and display
+	the ads in whatever way you want. This option gives you
+	the maximum flexibility, but the most programming work.@@
+	</font>
+	<br>
+	<textarea name="ad4" rows=1 style="width: 100%;">{URL}&output=xml</textarea>
+	<br/>&nbsp;
+	</td>
+</tr>
+<tr>
+	<td><font size=3><b>@@Overriding Default Zone Settings@@</b></font><br>
+	<font size=1>
+	@@You can override zone settings by adding the following parameters to the
+	ad code URL@@:
+	<p>
+	<table width=100% border=0 cellspacing=0 cellpadding=2>
+	<tr>
+		<td width=1><b>&rows=</b></td>
+		<td width=99%>@@The number of rows of ads to show@@</td>
+	</tr>
+	<tr>
+		<td width=1><b>&cols=</b></td>
+		<td width=99%>@@The number of columns of ads to show@@</td>
+	</tr>	
+	<tr>
+		<td width=1><b>&ad_sort=</b></td>
+		<Td width=99%>@@Set to@@&nbsp;<b>asc</b>&nbsp;@@for oldest first@@,&nbsp;<b>desc</b>&nbsp;@@for newest first@@,
+			&nbsp;<b>rand</b>&nbsp;@@for random or@@&nbsp;<b>bid</b>&nbsp;@@for highest bidded ads first@@.
+		</td>
+	</tr>	
+	</table>
+	</td>
+</tr>
+</table>
+<!-- END: main -->

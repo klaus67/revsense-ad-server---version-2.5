@@ -1,0 +1,29 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=1 cellpadding=3>
+<form method=get>
+<tr>
+	<td colspan=2>
+	@@You can create a new Template based on the settings in this zone@@.<br>
+	@@When you create a new zone based on the new template, you can then fine tune its settings.@@
+	</td>
+</tr>
+<tr>
+	<td width=1><b>@@Template@@&nbsp;@@Name@@:</td>
+	<Td width=99%><input type=text name=f[type_name] size=32 maxlength=64></td>
+</tr>
+<tr>
+	<td colspan=2><input type=submit value="@@Create Template@@"></td>
+</tr>
+<input type=hidden name=f[id] value="{ID}">
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_clone>
+</form>
+</table>
+<hr size=1>
+<font size=3><b>@@Current Templates@@:</b></font>
+<ul>
+	<!-- BEGIN: list --><li> <font size=2>{NAME}</font><br><!-- END: list -->
+</ul>
+<!-- END: main -->

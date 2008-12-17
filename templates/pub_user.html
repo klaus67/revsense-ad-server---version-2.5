@@ -1,0 +1,64 @@
+<!-- BEGIN: users -->
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td colspan=5>
+		<table width=100% border=0 cellspacing=0 cellpadding=3>
+		<form method=get>
+		<tr bgcolor="#EEEEEE">
+			<td width=1><b>@@Find@@:</b></td>
+			<td width=1><input type=text name=f[search] size=30 value="{SEARCH}"></td>
+			<td width=1><input type=submit value=Go></td>
+			<td width=80%><font size=2>@@You can search on email, name, id, or organization -- with wildcards@@</font></td>
+			<td width="10%"><font size=2><a href="?section=pubadmin&action=rates">@@Publisher@@&nbsp;@@Rates@@</a></font></td>
+		</tr>
+		<input type=hidden name=section value=useradmin>
+		</form>
+		</table>
+	</td>
+</tr>
+</table>
+<hr size=1>
+{TABLE}
+<!-- END: users -->
+
+<!-- BEGIN: stats -->
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<tr>
+	<td colspan=5>
+		<table width=100% border=0 cellspacing=0 cellpadding=3>
+		<form method=get>
+		<tr bgcolor="#EEEEEE">
+			<td width=1><b>@@Date@@:</b></td>
+			<td width=1>
+				<select name=f[date]>
+				{DATELIST}
+				</select>
+			</td>
+			<td width=1><b>@@Sort@@:</b></td>
+			<td width=1>
+				<select name=f[sort]>
+				{SORTLIST}
+				</select>
+			</td>
+			<td width=1><b>@@IP@@:</b></td>
+			<td width=1><input type=text name=f[ip] value="{IP}" size=15></td>
+			<td width=1><input type=submit value=Go></td>
+			<td width=99% align=right>
+				[ @@Balance@@: <b>@@$@@{BALANCE}</b> ]
+				&nbsp;&nbsp;<a href=?section=pubadmin&action=pay&f[id]={ID}>Pay Publisher</a>&nbsp;&nbsp;|&nbsp;
+				<a href=?section=pubadmin&action=download_stats&f[id]={ID}>CSV Download</a>
+			</td>
+		</tr>
+		<input type=hidden name=section value=pubadmin>
+		<input type=hidden name=action value=stats>
+		<input type=hidden name=f[id] value="{ID}">
+		</form>
+		</table>
+	</td>
+</tr>
+</table>
+<hr size=1>
+{PAGER}<br>&nbsp;
+{TABLE}
+<br>{PAGER}
+<!-- END: stats -->

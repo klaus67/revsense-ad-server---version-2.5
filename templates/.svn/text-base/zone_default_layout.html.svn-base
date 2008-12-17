@@ -1,0 +1,11 @@
+<table width="{WIDTH}" border=0 cellspacing=0 cellpadding=3>
+<!-- BEGIN: row -->
+<tr>
+	<!-- BEGIN: col -->
+	<td>
+	{AD}
+	</td>
+	<!-- END: col -->
+</tr>
+<!-- END: row -->
+</table>

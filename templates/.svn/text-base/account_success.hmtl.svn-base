@@ -1,0 +1,5 @@
+<!-- BEGIN: main -->
+@@Your payment was accepted.@@
+<p>
+<a href=?section=account>@@Proceed to Accounts@@</a>
+<!-- END: main -->

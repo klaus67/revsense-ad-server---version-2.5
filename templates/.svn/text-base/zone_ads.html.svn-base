@@ -1,0 +1,69 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=1 cellpadding=3>
+<form method=get>
+<tr bgcolor=#CCCCCC>
+	<td width=1><font size=1><b>@@Zone@@</b></font></td>
+	<td width=1><font size=1><b>@@Status@@</b></font></td>
+	<td width=1><font size=1><b>@@User's Email@@</b></font></td>
+	<td width=99% colspan=2>&nbsp;</td>
+</tr>
+<tr bgcolor=#FFFFCC>
+	<td width=1>
+		<select name=f[id]>
+			<option value="0">-- @@All Zones@@ --</option>		
+			{ZONES}
+		</select>
+	</td>
+	<td width=1>
+		<select name=f[status]>
+			{STATUS}
+		</select>
+	</td>
+	<td width=1><input type=text name=f[email] size=25 value="{EMAIL}"></td>
+	<td width=1><input type=submit value="@@Filter Ads@@"></td>
+	<td width=99% align=right><font size=1>{DEFAULT_AD}</td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_ads>
+</form>
+</table>
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td bgcolor=#666666>
+
+<table width=100% border=0 cellspacing=1 cellpadding=4>
+<tr bgcolor=#CCCCCC>
+	<!-- BEGIN: default_title -->
+	<td><font size=1>@@Default@@</font></td>
+	<!-- END: default_title -->
+	<td><font size=1><b>@@Title@@</b></td>
+	<td><font size=1><b>@@Zone@@</b></td>
+	<td width=1><font size=1><b>@@User@@</b></td>
+	<td width=1><font size=1><b>@@Created@@</b></td>
+	<td width=1><font size=1><b>@@Expires@@</b></td>
+	<td width=1 colspan=2><font size=1><b>@@Status@@</b></td>
+	<td colspan=2 width=1><font size=1>&nbsp;</td>
+</tr>
+<!-- BEGIN: list -->
+<tr bgcolor="{BGCOLOR}">
+	<!-- BEGIN: default_row -->
+	<td width=1><font size=1><a href="?section=zone&action=zone_ads&c=default&f[adid]={ADID}&f[id]={ZONEID}&f[email]={EMAIL}"><font color={DEFAULT}>{DEFAULTTEXT}</font></a>
+	<!-- END: default_row -->
+	<td width=99%><font size=1><a href="?section=ads&action=preview&f[id]={ZID}" title="@@Preview Ad@@ {TITLE}">{TITLE}</a></td>
+	<td><font size=1><a href="?section=zone&action=zone_ads&f[id]={ZONEID}">{ZONE}</a></td>
+	<td><font size=1><a href="?section=useradmin&action=view&f[id]={USERID}" title="@@View account@@">{ADEMAIL}</a></td>
+	<td><font size=1>{DATE}</td>
+	<td><font size=1>{EXPIRES}</td>
+	<td width=1><font size=1>{STATUS}</font></td>
+	<td width=1><font size=1><a href="?section=zone&action=zone_ads&c={CHANGESTATUS}&f[adid]={ADID}&f[id]={ZONEID}&f[email]={EMAIL}" onclick="javascript:return confirm('@@Are you sure you want to@@ {CHANGEACTION} [ {TITLE} ] ?')">{CHANGEACTION}</a></td>	
+	<td width=1><font size=1><a href="?section=ads&action=edit&f[id]={ZID}" title="@@Edit@@ [{TITLE}]"><img src=images/stock_edit-16.png border=0></a></td>
+	<td width=1><font size=1><a href="?section=zone&action=zone_ads&c=delete&f[adid]={ADID}&f[id]={ZONEID}&f[email]={EMAIL}" title="@@Delete@@ [{TITLE}]" onclick="javascript:return confirm('@@Are you sure you want to delete@@ [ {TITLE} ] ?')"><img src=images/stock_delete-16.png border=0></a></td></td>	
+</tr>
+<!-- END: list -->
+</table>
+
+</td></tr>
+</table>
+<!-- END: main -->

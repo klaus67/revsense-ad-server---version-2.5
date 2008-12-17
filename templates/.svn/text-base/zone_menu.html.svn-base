@@ -1,0 +1,15 @@
+<!-- BEGIN: main -->
+<table width=100% border=0 cellpadding=8 style="background-color: #EEE; border-bottom: 1px dotted #999;">
+<tr bgcolor="#FFFFCC"><td>
+	&nbsp;<a href=?section=zone><b>@@Zone List@@</b></a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_define&f[id]={ID}>@@Define Zone@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_keywords&f[id]={ID}>@@Keywords@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_format&f[id]={ID}>@@Format@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_layout&f[id]={ID}>@@Layout@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_daypart&f[id]={ID}>@@Dayparting@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_code&f[id]={ID}>@@Ad Code@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_ads&f[id]={ID}>@@Ads in this zone@@</a>&nbsp;&nbsp;|&nbsp;
+	<a href=?section=zone&action=zone_clone&f[id]={ID}>@@Make Template@@</a>
+</td></tr>
+</table>
+<!-- END: main -->

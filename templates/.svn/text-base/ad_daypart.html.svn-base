@@ -1,0 +1,88 @@
+<!-- BEGIN: main -->
+{ADS_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=5>
+<form method=post>
+<tr>
+	<Td colspan=2>
+	@@You can schedule this ad by setting the start and end date, as well as which days and hours it should run@@.
+	@@Leave the fields blank for the ad to run continuously@@.
+	</Td>
+</tr>
+<tr>
+	<td width=1>@@Start Date@@:</td>
+	<td width=99%>
+		{STARTDATE}
+	</td>
+</tr>
+<tr>
+	<td width=1>@@End Date@@:</td>
+	<td width=99%>
+		{ENDDATE}
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Days@@:</td>
+	<td width=99%>
+	<table width=100 border=0 cellspacing=2 cellpadding=1>
+	<Tr bgcolor="#EEEEEE">
+		<td width=1 align=center><font size=1>@@Sun@@</font></td>	
+		<td width=1 align=center><font size=1>@@Mon@@</font></td>
+		<td width=1 align=center><font size=1>@@Tue@@</font></td>
+		<td width=1 align=center><font size=1>@@Wed@@</font></td>
+		<td width=1 align=center><font size=1>@@Thu@@</font></td>
+		<td width=1 align=center><font size=1>@@Fri@@</font></td>
+		<td width=1 align=center><font size=1>@@Sat@@</font></td>
+	</Tr>
+	<Tr bgcolor="#FFFFCC">
+		<!-- BEGIN: days -->
+		<td width=1 align=center><input type="checkbox" value="{DAY}" name="f[daypart_days][]" {DAYPART_DAY}></td><!-- END: days -->
+	</Tr>	
+	</table>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Hours@@:&nbsp;({TZ})</td>
+	<td width=99%>
+	<table width=100 border=0 cellspacing=1 cellpadding=1>
+	<tr bgcolor="#EEEEEE">
+		<!-- BEGIN: hour_title -->
+		<td width=1 align=center><font size=1>{HOUR_TITLE}</font></td><!-- END: hour_title -->
+	</tr>
+	<tr bgcolor="#FFFFCC">
+		<!-- BEGIN: hours -->
+		<td width=1 align=center><input type=checkbox value="{HOUR}" name="f[daypart_hours][]" {DAYPART_HOUR}></td><!-- END: hours --> 
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Max@@&nbsp;{SUNITS}:</td>
+	<td width=99%><input type=text name=f[units] size=10 value="{UNITS}">
+		<font size=1>
+			<br>
+			@@Ad will expire after this number of@@&nbsp;{SUNITS}.<br>
+			@@There are already@@ {TOTAL_UNITS} {SUNITS}. @@Leave at zero for unlimited@@.
+		</font>
+	</td>
+</tr>
+<tr>
+	<td width=1 valign=top>@@Max@@&nbsp;@@Spend@@:</td>
+	<td width=99%><input type=text name=f[spend_limit] size=10 value="{SPEND_LIMIT}">
+		<font size=1>
+			<br>
+			@@Ad will expire after this amount is spent@@.
+		</font>
+	</td>
+</tr>
+
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><input type=submit value="@@Update@@" name=f[submit]></td>
+</tr>
+<input type=hidden name=section value=ads>
+<input type=hidden name=action value=schedule>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

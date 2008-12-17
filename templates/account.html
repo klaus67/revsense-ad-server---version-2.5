@@ -1,0 +1,49 @@
+<!-- BEGIN: main -->
+<p><i>@@You can add payments to your account here. Your ads will not run without a positive balance on your account.@@</i></p>
+
+<table width="100%" border=0 cellspacing=0 cellpadding=8 style="background-color: #EEE; border-bottom: 1px dotted #999;">
+<form method=get>
+<tr>
+	<td width=1><font size=2>&nbsp;<b>@@Balance@@:</b></td>
+	<td width=1 nowrap><font size=2><b>##CURRENCY_SYMBOL##{BALANCE}</b>&nbsp;</td>
+	<td width=1>&nbsp;&nbsp;</td>
+	<td width=1><font size=2>@@Add@@&nbsp;@@Funds@@:&nbsp;@@$@@</td>
+	<form method="GET">
+	<td width=1><input type=text name=f[amount] size=8 value="{MIN2}"></td>
+	<td width=1>
+		<input type=submit value="@@Add Funds@@ &raquo;">
+		<input type=hidden name=section value=pay>
+		<input type=hidden name=action value=form>
+	</td>
+	</form>
+	<td width=30%><font size=1><i>@@Minimum@@: ##CURRENCY_SYMBOL##{MINIMUM}</i></font></td>
+	<td width="50%" align="right">
+	<!-- BEGIN: transfer -->
+	<form method="GET">
+		@@Transfer my earnings here@@: 
+		<input type="text" name="transfer" value="{PUB_BALANCE}" size="8" /><input type="submit" value="Transfer" />
+		<input type="hidden" name="section" value="pub" />
+		<input type="hidden" name="action" value="stats" />
+	</form>
+	<!-- END: transfer -->
+	</td>
+</tr>
+</table>
+<p>@@Your Payment &amp; Account History@@</p>
+<table width=100% class="xtable">
+<tr bgcolor=#CCCCCC>
+	<th><b>@@Date@@</b></th>
+	<th><b>@@Type@@</b></th>
+	<th><b>@@Description@@</b></th>
+	<th align=right class="last"><b>@@Amount@@</b></th>
+</tr>
+<!-- BEGIN: list -->
+<tr bgcolor={BGCOLOR}>
+	<td>{DATE}</td>
+	<td>{TYPE}</td>
+	<td>{DESC}</td>
+	<td align=right class="last">{AMOUNT}</td>
+</tr>
+<!-- END: list -->
+</table>
+<!-- END: main -->

@@ -1,0 +1,37 @@
+<!-- BEGIN: main -->
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<form method=post>
+	<!-- BEGIN: msg -->
+	<tr>
+		<td colspan=2>
+		<font size=3>
+			@@You're here because you want to use a section of the site that requires you to login. If you do 
+			not already have a login@@, <a href=?section=user&action=register>@@please register with our quick and easy registration form@@.</a><p>
+			@@Once you're finished, we'll take you right back to finish your current task, exactly where you left off@@.
+		</font>
+	</td>
+</tr>
+<!-- END: msg -->
+<tr>
+	<td width=1><b>@@Email@@:</b></td>
+	<td width=99%><input type=text name=f[email] value="{EMAIL}"></td>
+</tr>
+<tr>
+	<td width=1><b>@@Password@@:</b></td>
+	<td width=99%><input type=password name=f[password]></td>
+</tr>
+<tr>
+	<td colspan=2><a href=?section=user&action=forgot>@@Forgot your password?@@</a></td>
+</tr>
+<tr>
+	<td colspan=2><a href=?section=user&action=register>@@Register as a new member@@</a></td>
+</tr>
+<tr>
+	<td colspan=2><input type=submit value="@@Login@@" class=submit></td>
+</tr>
+
+<input type=hidden name=section value=user>
+<input type=hidden name=action value=login>
+</form>
+</table>
+<!-- END: main -->

@@ -1,0 +1,14 @@
+<!-- BEGIN: main -->
+<a href="index.php?section=ads">@@My Ads@@</a> &raquo; @@{XACTION_NAME}@@ - <b>"{TITLE}"</b>
+<table width=100% border=0 cellpadding=8 style="background-color: #EEE; border-bottom: 1px dotted #999;">
+<tr bgcolor="#FFFFCC">
+	<td width=1><A href="?section=ads">@@Ads@@</A></td>
+	<td width=1><a href=?section=ads&action=edit&f[id]={ID}>@@Edit@@</a></td>			
+	<td width=1><a href=?section=ads&action={ACTION}&f[id]={ID}>@@{ACTION_NAME}@@</a></td>		
+	<td width=1><a href=?section=ads&action=preview&f[id]={ID}>@@Preview@@</a></td>	
+	<!-- BEGIN: daypart --><td width=1><a href=?section=ads&action=schedule&f[id]={ID}>@@Schedule@@</a></td><!-- END: daypart -->
+	<td width=99%><i>{TITLE}</i></td>
+	<td width="1"><b>{STATUS}</b></td>
+</tr>
+</table>
+<!-- END: main -->

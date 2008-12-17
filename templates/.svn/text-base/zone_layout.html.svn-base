@@ -1,0 +1,48 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<form method=post>
+<tr>
+	<td width=1><b>@@Max Ads@@:</b></td>
+	<td width=99%><input type=text name=f[max_display_ads] value="{MAX_DISPLAY_ADS}" size=5><font size=1>
+		<i>@@maximum ads to show in each rotation@@</i></font>
+	</td>
+</tr>
+<tr bgcolor=#EEEEEE>
+	<Td colspan=2>
+	<font size=1>
+	@@You can setup the layout of your ads in terms of rows and columns. AdRevenue will do its best@@
+	@@to conform to the rows and columns you specify. Multiply the number of rows and columns to@@ 
+	@@know the maximum number of ads to be shown in each rotation@@.
+	</font>
+	</Td>
+</tr>
+<tr bgcolor=#EEEEEE>
+	<td width=1><b>@@Rows@@:</b></td>
+	<td width=99%><input type=text name=f[rows] value="{ROWS}" size=5></td>
+</tr>
+<tr bgcolor=#EEEEEE>
+	<td width=1><b>@@Columns@@:</b></td>
+	<td width=99%><input type=text name=f[cols] value="{COLS}" size=5></td>
+</tr>
+<tr>
+	<td colspan=2>
+	<b>@@Layout Template@@:</b><br>
+	<font size=1>
+	@@You can edit the HTML used to setup the row and column layout@@.<br>
+	@@Leave it blank to reset to the default layout template@@.<br>
+	</font>
+	<textarea name=f[layout_template] rows=10 cols=60 wrap=none>{LAYOUT_TEMPLATE}</textarea>
+	</td>
+</tr>
+<tr>
+	<td width=1>&nbsp;</td>
+	<td width=99%><br><input type=submit value="Update" name=f[submit]></td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_layout>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

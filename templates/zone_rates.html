@@ -1,0 +1,65 @@
+<!-- BEGIN: main -->
+{ZONE_MENU}
+<p>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+<form method=post>
+<tr>
+	<td>
+	@@Specify one or more rates that apply to this zone@@.<br>
+	@@You can specify three types of rates@@:
+	<ul>
+	<li> @@CPC - Cost per Click@@
+	<li> @@CPM - Cost per 1,000 impressions@@
+	<li> @@CPD - Cost per day@@
+	</ul>
+	</td>
+</tr>
+<tr>
+	<Td colspan=2>
+	<table width=300 border=0 cellspacing=1 cellpadding=3>
+	<tr>
+		<td><b>@@Name@@</b></td>
+		<td><b>@@Type@@</b></td>
+		<td><b>@@Rate@@</b></td>
+		<td align=center><b>@@Delete@@</b></td>
+	</tr>
+	<!-- BEGIN: list -->
+	<tr>
+		<td><input type=text name="e[{ID}][name]" size=30 value="{NAME}"></td>
+		<td>
+			<select name="e[{ID}][type]">
+				<option value=0>---</option>
+				{TYPE}
+			</select>
+		</td>
+		<td><input type=text name="e[{ID}][rate]" size=8 value="{RATE}"></td>
+		<td align=center><input type=checkbox name="r[delete][{ID}]" value=1 {DELETE}></td>
+	</tr>
+	<!-- END: list -->
+	<tr>
+		<td colspan=4>&nbsp;<br><b>@@Add a new rate@@</b></td>
+	</tr>
+	<tr bgcolor="#FFFFCC">
+		<td><input type=text name="f[name]" size=30></td>
+		<td>
+			<select name="f[type]">
+				<option value=0>---</option>
+				<option value="CPC">CPC</option>
+				<option value="CPM">CPM</option>
+				<option value="CPD">CPD</option>
+			</select>
+		</td>
+		<td><input type=text name="f[rate]" size=8></td>
+		<td align=center>&nbsp;</td>
+	</tr>	
+	</Td>
+</tr>
+<tr>
+	<td><br><input type=submit value="@@Update@@" name=f[submit]></td>
+</tr>
+<input type=hidden name=section value=zone>
+<input type=hidden name=action value=zone_rates>
+<input type=hidden name=f[id] value="{ID}">
+</form>
+</table>
+<!-- END: main -->

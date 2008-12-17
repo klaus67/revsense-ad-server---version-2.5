@@ -1,0 +1,40 @@
+8
+
+dir
+6
+svn://w3matter.com/zen/revsense/templates/pubadmin
+svn://w3matter.com/zen
+
+
+
+2007-11-30T17:06:06.001500Z
+1
+eric
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8a6c2ae3-53ab-4756-9ca0-1d89f72e02fb
+
+rates.php
+file
+
+
+
+
+2008-05-26T19:38:53.000000Z
+937055da4e8259d2dc96f6a4c1af3ceb
+2007-11-30T17:06:06.001500Z
+1
+eric
+

@@ -1,0 +1,24 @@
+<!-- BEGIN: main -->
+<font color=red>{ERRORMSG}</font>
+<table width=100% border=0 cellspacing=0 cellpadding=3>
+	<form method=get>
+		<tr>
+			<td colspan=2>
+				@@If you forgot your password, please enter the email that you registered
+				with. We will send your login information to that address@@. 
+			</td>
+		</tr>
+		<tr>
+			<td width=1>@@Email@@:</td>
+			<td width=99%><input type=text name=f[email]></td>
+		</tr>
+		<tr>
+			<td width=1>&nbsp;</td>
+			<td width=99%><input type=submit value="@@Retrieve Password@@"></td>
+		</tr>
+
+		<input type=hidden name=section value=user>
+		<input type=hidden name=action value=forgot>
+	</form>
+</table>
+<!-- END: main -->

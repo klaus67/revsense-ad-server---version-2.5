@@ -1,0 +1,11 @@
+a:2:{s:2:"ts";i:1196442363;s:3:"val";a:33:{s:2:"id";s:4:"1008";s:4:"name";s:19:"Pfishy.com Test Ads";s:11:"description";s:0:"";s:5:"rtype";s:1:"1";s:5:"style";s:2:"48";s:6:"status";s:1:"1";s:12:"auto_approve";s:1:"1";s:15:"keywords_enable";s:1:"0";s:14:"keywords_fuzzy";s:1:"0";s:8:"keywords";N;s:12:"keywords_max";s:1:"0";s:14:"daypart_enable";s:1:"0";s:12:"daypart_days";s:1:"0";s:13:"daypart_hours";s:1:"0";s:10:"default_ad";N;s:12:"max_zone_ads";s:1:"0";s:15:"max_display_ads";s:1:"1";s:7:"ad_sort";s:4:"rand";s:9:"urls_hide";s:1:"1";s:13:"urls_tracking";s:1:"0";s:11:"urls_target";s:4:"_new";s:9:"ad_format";s:364:"a:2:{i:1;a:7:{s:4:"type";s:5:"TITLE";s:4:"name";s:5:"Title";s:4:"font";s:26:"Arial,Helvetica,sans-serif";s:4:"size";s:1:"2";s:5:"color";s:5:"black";s:4:"bold";s:1:"1";s:10:"max_length";s:2:"32";}i:3;a:6:{s:4:"type";s:3:"URL";s:4:"name";s:3:"URL";s:4:"font";s:26:"Arial,Helvetica,sans-serif";s:4:"size";s:1:"2";s:5:"color";s:5:"black";s:10:"max_length";s:3:"512";}}";s:4:"rows";s:1:"1";s:4:"cols";s:1:"1";s:15:"layout_template";s:184:"<table width="100%" border=0 cellspacing=0 cellpadding=3>
+<!-- BEGIN: row -->
+<tr>
+	<!-- BEGIN: col -->
+	<td>
+	{AD}
+	</td>
+	<!-- END: col -->
+</tr>
+<!-- END: row -->
+</table>";s:8:"template";s:26:"<a {URLSTRING}>{TITLE}</a>";s:9:"rate_type";s:3:"CPM";s:4:"rate";s:5:"10.00";s:11:"aff_percent";s:4:"0.00";s:7:"runtime";s:1:"0";s:5:"units";s:1:"0";s:9:"pub_rates";s:258:"a:5:{i:0;a:3:{i:0;s:2:"10";i:1;s:2:"50";i:2;s:2:"30";}i:1;a:3:{i:0;s:2:"50";i:1;s:3:"100";i:2;s:2:"40";}i:2;a:3:{i:0;s:3:"100";i:1;s:3:"500";i:2;s:2:"50";}i:3;a:3:{i:0;s:3:"500";i:1;s:6:"999999";i:2;s:2:"60";}i:4;a:3:{i:0;s:1:"0";i:1;s:2:"99";i:2;s:2:"20";}}";s:8:"pub_only";s:1:"0";}}

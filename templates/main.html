@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><?= $this->title ? $this->title : $this->heading ?></title>
+    <link href="static/revsense.css" media="screen" rel="Stylesheet" type="text/css" />
+    <script src="static/prototype.js" type="text/javascript"></script>
+    <script src="static/revsense.js" type="text/javascript"></script>
+    <!--[if lt IE 7]>
+    <script defer type="text/javascript" src="static/pngfix.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="site-title"><a href="index.php"><?= lib_lang($this->default['revsense']['name']) ?></a></div>
+        <div id="site-subtitle">
+				<? if ($_SESSION['user']) { ?>
+					<?= lib_lang('Welcome back') ?> <?= $_SESSION['user']['name'] ?>
+				<? } else { ?>
+					<?= lib_lang('Welcome to our advertising portal') ?>
+				<? } ?>
+				</div>
+        <div id="navigation">
+					<!-- main menu -->
+					<? if ($_SESSION['user']) { ?>
+					  <a href="?section=ads"><?= lib_lang('My Ads') ?></a> <span class="separator"> | </span> 
+						<a href="?section=account"><?= lib_lang('Payments') ?></a> <span class="separator"> | </span>						
+					<? } ?>
+					<? if ($_SESSION['user']['admin'] == 2) { ?>
+						<!-- publisher -->
+						<a href="?section=pub&action=ads"><?= lib_lang('Publisher Code') ?></a> <span class="separator"> | </span> 
+						<a href="?section=pub&action=stats"><?= lib_lang('Earnings') ?></a> <span class="separator"> | </span>						
+					<? } ?>
+					<? if ($_SESSION['user']['admin'] == 3) { ?>
+						<span class="separator"> | </span>	
+					  <a href="?section=zone"><?= lib_lang('Zones') ?></a> <span class="separator"> | </span> 
+						<a href="?section=useradmin"><?= lib_lang('Advertisers') ?></a> <span class="separator"> | </span>			
+						<a href="?section=pubadmin"><?= lib_lang('Publishers') ?></a> <span class="separator"> | </span>
+						<a href="?section=settings"><?= lib_lang('Settings') ?></a> <span class="separator"> | </span>
+					<? } ?>
+					<!-- /main menu -->
+        </div>
+      </div>
+      <hr class="hidden" />
+      <div id="main">
+        <div id="content">
+					<? if ($this->notice || $this->warning) { ?><div id="notice"><?= $this->notice ? implode('<br/>', $this->notice) : implode('<br/>', $this->warning) ?></div><? } ?>
+					<h1><?= $this->title ?></h1>
+					<p><?= $this->content ?></p>
+        </div>
+      </div>
+      <hr class="hidden" />
+      <div id="footer">
+	  	<p>
+					&copy; <?= date('Y') ?> <?= $this->default['revsense']['name'] ?> |
+					<a href=?section=contact><?= lib_lang('Contact Us') ?></a> | 
+					<a href="?section=doc&action=faq"><?= lib_lang('FAQ') ?></a> |
+					<a href="?section=doc&action=terms"><?= lib_lang('Terms &amp; Conditions') ?></a>
+					<!-- 
+					Honor System Alert!
+					Please do not remove the powered-by notice without paying the fee first!!
+					W3matter does this in order to help keep the price of the software low.
+					You can visit this url to pay the fee and then remove the notice:
+					http://www.revsense.com/buy
+					-->
+					<br/>&nbsp;<br/><small><a href="http://www.revsense.com">Powered by RevSense Ad Server</a></small> 
+			</p>
+			<!-- site menu -->
+        <p id="site-links">
+					<? if (!$_SESSION['user']) { ?>
+						<a href="?section=user&action=login"><strong><?= lib_lang('Login') ?></strong></a>
+						<span class="separator"> | </span>
+						<a href="?section=user&action=register&t=adv"><?= lib_lang('Advertisers') ?></a>
+						<span class="separator"> | </span>		
+						<a href="?section=user&action=register&t=pub"><?= lib_lang('Publishers') ?></a>
+					<? } else { ?>
+						<?= lib_lang('Ad balance is') ?> 
+							<a href="?section=account"><?= $this->default['revsense']['currency_symbol'] ?><?= number_format($this->balance,2) ?></a>
+						<span class="separator"> | </span>						
+						<a href="?section=profile"><?= lib_lang('Edit Account') ?></a>
+						<span class="separator"> | </span>	
+						<a href="?section=user&action=logout"><?= lib_lang('Logout') ?></a>
+					<? } ?>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
